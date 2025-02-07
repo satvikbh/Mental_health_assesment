@@ -9,8 +9,6 @@ An interactive **machine learning-based** web application designed to provide **
 ## 📌 Table of Contents
 
 - [🌟 Features](#-features)
-- [📂 Project Structure](#-project-structure)
-- [⚙️ Prerequisites](#️-prerequisites)
 - [🚀 Installation](#-installation)
 - [🛠️ Usage](#️-usage)
   - [🔄 Data Preprocessing & Model Training](#-data-preprocessing--model-training)
