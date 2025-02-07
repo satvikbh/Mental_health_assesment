@@ -1,135 +1,155 @@
-Student Mental Health Assessment Tool
-Overview
-This project is a Streamlit-based web application designed to assess the mental health of students. It uses machine learning models to predict the risk levels of depression, anxiety, and panic attacks based on student input data. The application provides personalized recommendations and resources to help students manage their mental health.
+# 🎓 Student Mental Health Assessment Tool 🧠💙  
 
-Features
-User-Friendly Interface: Easy-to-use form for students to input their details.
+A **Streamlit-based web application** designed to **assess student mental health** by predicting the risk levels of **depression, anxiety, and panic attacks** using machine learning. The app provides **personalized recommendations and mental health resources** to support students.  
 
-Risk Assessment: Predicts the risk levels for depression, anxiety, and panic attacks.
+> ⚠️ **Disclaimer:** This tool is not a substitute for professional medical advice. Please consult a mental health professional if needed.
 
-Personalized Recommendations: Provides tailored advice based on the assessment results.
+---
 
-Resource Links: Directs students to campus counseling, helplines, and academic services.
+## 📌 Features  
 
-Detailed Analysis: Offers in-depth information and advice for each mental health condition.
+✅ **User-Friendly Interface** – Simple form for students to input their details.  
+✅ **Risk Assessment** – Predicts the risk levels for **depression, anxiety, and panic attacks**.  
+✅ **Personalized Recommendations** – Provides tailored advice based on assessment results.  
+✅ **Resource Links** – Connects students to **campus counseling, helplines, and academic support**.  
+✅ **Detailed Analysis** – Offers in-depth insights into mental health conditions.  
 
-Installation
-Prerequisites
-Python 3.7 or higher
+---
 
-pip (Python package installer)
+## ⚙️ Installation  
 
-Steps
-Clone the Repository
+### 📋 Prerequisites  
 
-bash
-Copy
-git clone https://github.com/your-username/student-mental-health-assessment.git
-cd student-mental-health-assessment
-Create a Virtual Environment
+- **Python 3.7 or higher**  
+- **pip (Python package installer)**  
 
-bash
-Copy
-python -m venv venv
-source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-Install Dependencies
+### 📥 Steps  
 
-bash
-Copy
-pip install -r requirements.txt
-Run the Application
+1. **Clone the Repository**  
+   ```markdown
+   git clone https://github.com/your-username/student-mental-health-assessment.git
+   cd student-mental-health-assessment
+   ```
 
-bash
-Copy
-streamlit run app.py
-Access the Application
+2. **Create a Virtual Environment**  
+   ```markdown
+   python -m venv venv
+   source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+   ```
 
-Open your web browser and go to http://localhost:8501.
+3. **Install Dependencies**  
+   ```markdown
+   pip install -r requirements.txt
+   ```
 
-Usage
-Input Student Details: Fill in the form with the required details such as gender, age, course, year of study, CGPA, and marital status.
+4. **Run the Application**  
+   ```markdown
+   streamlit run app.py
+   ```
 
-Begin Assessment: Click on the "Begin Assessment" button to start the evaluation.
+5. **Access the Application**  
+   🌐 Open your web browser and go to **[http://localhost:8501](http://localhost:8501)**.  
 
-View Results: The application will display the risk levels for depression, anxiety, and panic attacks along with personalized recommendations.
+---
 
-Detailed Analysis: Expand each section to view detailed advice and information about each condition.
+## 🎭 Usage  
 
-Next Steps: Follow the suggested next steps and consider discussing the results with a mental health professional.
+1. **Input Student Details** – Fill in details such as **gender, age, course, year of study, CGPA, and marital status**.  
+2. **Begin Assessment** – Click **"Begin Assessment"** to evaluate your mental health.  
+3. **View Results** – See risk levels for **depression, anxiety, and panic attacks** along with **personalized recommendations**.  
+4. **Detailed Analysis** – Expand each section to view in-depth advice and insights.  
+5. **Next Steps** – Follow **suggested steps** and consider discussing your results with a professional.  
 
-Project Structure
-Copy
+---
+
+## 📂 Project Structure  
+
+```markdown
 student-mental-health-assessment/
 │
-├── app.py                  # Main Streamlit application file
-├── data_preprocessing.py   # Script for data preprocessing and model training
-├── mental_health_models.pkl# Trained machine learning models
-├── scaler.pkl              # Scaler used for data normalization
-├── train_columns.pkl       # Columns used during model training
-├── requirements.txt        # List of dependencies
-├── README.md               # This file
-└── student mental health.csv # Dataset used for training (not included in the repository)
-Data Preprocessing
-The data preprocessing script (data_preprocessing.py) performs the following steps:
+├── app.py                   # 🎭 Main Streamlit application file
+├── data_preprocessing.py    # 🛠️ Data preprocessing & model training script
+├── models/
+│   ├── mental_health_models.pkl  # 🧠 Trained machine learning models
+│   ├── scaler.pkl               # 🔄 Scaler for data normalization
+│   ├── train_columns.pkl        # 🔠 Columns used during training
+├── requirements.txt         # 📌 Python dependencies
+├── README.md                # 📖 Project documentation (this file)
+└── data/student_mental_health.csv  # 📊 Training dataset (not included in repo)
+```
 
-Load Data: Reads the student mental health dataset.
+---
 
-Data Cleaning: Drops unnecessary columns, cleans column names, and handles missing values.
+## 🛠️ Data Preprocessing  
 
-Feature Engineering: Encodes categorical variables, simplifies course categories, and handles the 'year of Study' column.
+- **Load Data** – Reads student mental health dataset.  
+- **Data Cleaning** – Drops unnecessary columns, handles missing values.  
+- **Feature Engineering** – Encodes categorical variables, simplifies course categories.  
+- **Model Training** – Trains **RandomForest classifiers** for **depression, anxiety, and panic attacks**.  
+- **Model Saving** – Stores trained models and scaler for **real-time predictions** in the app.  
 
-Model Training: Trains separate Random Forest classifiers for depression, anxiety, and panic attacks.
+---
 
-Model Saving: Saves the trained models and scaler for use in the Streamlit application.
+## 📊 Model Evaluation  
 
-Model Evaluation
-The models are evaluated using classification reports which include precision, recall, and F1-score. The evaluation results are as follows:
+The models were evaluated using **classification reports (precision, recall, F1-score):**  
 
-Depression:
+| Condition       | Precision | Recall | F1-score |
+|----------------|----------|--------|----------|
+| **Depression** | 🟢 0.90  | 🟢 1.00 | 🟢 0.95 |
+| **Anxiety**    | 🟡 0.80  | 🟡 1.00 | 🟡 0.89 |
+| **Panic Attack** | 🔴 0.56  | 🔴 0.83 | 🔴 0.67 |
 
-Precision: 0.90
+🛠️ **Planned Improvements:**  
+- Balance the dataset using **oversampling/undersampling**.  
+- Explore **deep learning models (e.g., Transformers)** for better performance.  
+- Enhance **UI/UX** for better engagement.  
 
-Recall: 1.00
+---
 
-F1-score: 0.95
+## 🤝 Contributing  
 
-Anxiety:
+💡 **Want to improve this project? Follow these steps:**  
 
-Precision: 0.80
+1. **Fork the repository**.  
+2. **Create a new branch**:  
+   ```markdown
+   git checkout -b feature/YourFeatureName
+   ```
+3. **Commit your changes**:  
+   ```markdown
+   git commit -m "Add new feature"
+   ```
+4. **Push to your branch**:  
+   ```markdown
+   git push origin feature/YourFeatureName
+   ```
+5. **Submit a pull request** 🚀  
 
-Recall: 1.00
+---
 
-F1-score: 0.89
+## 📜 License  
 
-Panic Attack:
+📄 This project is licensed under the **MIT License**. See the **LICENSE** file for details.  
 
-Precision: 0.56
+---
 
-Recall: 0.83
+## 🙏 Acknowledgments  
 
-F1-score: 0.67
+💙 Special thanks to:  
+- **Streamlit** – for making it easy to build and share interactive data apps.  
+- **scikit-learn community** – for providing powerful machine learning tools.  
 
-Contributing
-Contributions are welcome! Please follow these steps:
+📢 *Mental health matters! Let’s use AI to support well-being!* 💙🚀  
 
-Fork the repository.
+---
 
-Create a new branch (git checkout -b feature/YourFeatureName).
+## 📬 Contact  
 
-Commit your changes (git commit -m 'Add some feature').
+📧 **For questions or feedback, reach out at:**  
+📩 **satvikbhardwaj2003@gmail.com**  
 
-Push to the branch (git push origin feature/YourFeatureName).
+---
 
-Open a pull request.
-
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-Acknowledgments
-Thanks to the creators of Streamlit for making it easy to build and share data apps.
-
-Thanks to the scikit-learn community for providing robust machine learning tools.
-
-Contact
-For any questions or feedback, please reach out to satvikbhardwaj2003@gmail.com
+🔥 *If you find this project helpful, give it a ⭐ on GitHub!* 🚀🎉  
 
