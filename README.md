@@ -69,10 +69,9 @@ student-mental-health-assessment/
 │
 ├── app.py                   # 🎭 Main Streamlit application file
 ├── data_preprocessing.py    # 🛠️ Data preprocessing & model training script
-├── models/
-│   ├── mental_health_models.pkl  # 🧠 Trained machine learning models
-│   ├── scaler.pkl               # 🔄 Scaler for data normalization
-│   ├── train_columns.pkl        # 🔠 Columns used during training
+├── mental_health_models.pkl  # 🧠 Trained machine learning models
+├── scaler.pkl               # 🔄 Scaler for data normalization
+├── train_columns.pkl        # 🔠 Columns used during training
 ├── requirements.txt         # 📌 Python dependencies
 ├── README.md                # 📖 Project documentation (this file)
 └── data/student_mental_health.csv  # 📊 Training dataset (not included in repo)
